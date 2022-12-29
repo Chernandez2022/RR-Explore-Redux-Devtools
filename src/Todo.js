@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
-import { useDispatch } from "react-redux";
-import { RemoveOne } from "./features/todoSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { addTodo, RemoveOne, clearTodo } from "./features/todoSlice";
 
 function Todo() {
   const items = useSelector((state) => state.todos.items);
@@ -30,3 +30,5 @@ function Todo() {
     </div>
   );
 }
+
+export default Todo;
